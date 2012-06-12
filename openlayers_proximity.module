@@ -20,6 +20,21 @@ function openlayers_proximity_init() {
 }
 
 /**
+ * Implements hook_variable_info().
+ */
+function openlayers_proximity_variable_info($options) {
+
+  $variable['openlayers_proximity_unit'] = array(
+    'title' => t('OpenLayers Proximity: Unit'),
+    'description' => t('Unit of measurement for the OpenLayers proximity calculator.'),
+    'type' => 'string',
+    'access' => 'administer openlayers',
+  );
+
+  return $variable;
+}
+
+/**
  * Implements hook_menu().
  */
 function openlayers_proximity_menu() {
