@@ -59,7 +59,7 @@ class openlayers_proximity_handler_field extends views_handler_field_numeric {
     }
 
     // Check to see if hiding should happen before adding prefix and suffix.
-    if ($this->options['hide_empty'] && empty($value) && ($value !== 0 || $this->options['empty_zero'])) {
+    if ($this->options['hide_empty'] && ($value == 0) && ($value !== 0 || $this->options['empty_zero'])) {
       return '';
     }
 
